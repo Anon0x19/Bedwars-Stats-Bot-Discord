@@ -1,11 +1,11 @@
-#####################################################
-#													#
-#			© Copyright 2020 Anon0x19				#
-#				All rights reserved					#
-#				Author: anon0x19					#
-#				Date: 09/05/2020					#
-#													#
-#####################################################
+#########################################################
+#							#
+#		© Copyright 2020 Anon0x19		#
+#		All rights reserved			#
+#		Author: anon0x19			#
+#		Date: 09/05/2020			#
+#							#
+#########################################################
 
 import requests
 import discord
@@ -16,10 +16,8 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 from discord import Webhook, RequestsWebhookAdapter, File
 
-TOKEN = "NzA4Mzg5ODY1OTQyOTQxNjk2.XrWsSA.SFpCLC9jXngDNwo_v-uBslORQkg"
-#webhook = Webhook.partial(708452057593544734, "qnAFjGrojGXdla0Xz3HiyGMEaXsD2RiUNnwc6tVJmrADQlFuPULSUm-oHSOFiiG_E0Ct", adapter=RequestsWebhookAdapter())
+TOKEN = "{your_api_key}"
 client = commands.Bot(command_prefix = ".")
-channel_ids = ["708405698110816368", "708452116573847662"]
 
 arr1 = []
 x = ""
@@ -78,13 +76,7 @@ async def on_message(message):
 
 	id = client.get_guild(673662940133720064)
 	print(tabulate(arr2))
-	#channel = client.get_channel(708405698110816368)
-	#await message.author.send("```" + "\n" + "Overall Stats:" + "\n" + tabulate(arr2) + "\n" + "```")
 	await message.channel.send(">>> __**Bedwars Stats Bot**__" + "\n" + "\n" + "\n" + "Overall Stats:" + "\n" + "```" + "\n" + tabulate(arr2) + "\n" + "```" + "\n" + "`Made by Anon0x19#6246`")
 	return arr2
-	#async def test(author, message):
-	#await message.author.send(arr2)
-	#await client.delete_message(message)
 
-#Webhook.send("Hello Thots, this is a test", username="Bedwars Stats")
 client.run(TOKEN)
