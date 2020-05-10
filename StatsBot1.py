@@ -10,6 +10,7 @@
 import requests
 import discord
 import asyncio
+import json
 from tabulate import tabulate
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -40,6 +41,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+	if message.author == client.user:
+		return
 	arr2 = [["LV", "Username", "FKDR", "WR", "WS", "BBLR"]]
 	arr3 = []
 	content = message.content
@@ -55,34 +58,30 @@ async def on_message(message):
 	for p in arr1:
 		arr3 = []
 		player = requests.get("https://api.slothpixel.me/api/players/" + p).json()
-
-		def getInfo(json, param):
- 			try:
- 				return int(json['achievements']['bedwars_level'])
- 				return int(json['stats']['Bedwars'][param])
- 			except:
- 				return 0
-
-		bwLevel1 = player['stats']['BedWars']['level']
-		bwLevel = str(bwLevel1) +"✫"
-		FKDR = player['stats']['BedWars']['final_k_d']
-		WR = player['stats']['BedWars']['w_l']
-		WS = player['stats']['BedWars']['winstreak']
-		BBLR = player['stats']['BedWars']['bed_ratio']
-		arr3.append(bwLevel)
-		arr3.append(p)
-		arr3.append(FKDR)
-		arr3.append(WR)
-		arr3.append(WS)
-		arr3.append(BBLR)
-		arr2.append(arr3)
-	print(arr2)
+		if "error" in player:
+			arr3.append("")
+			arr3.append("Nicked Player?")
+			arr2.append(arr3)
+		else:
+			bwLevel = str(player['stats']['BedWars']['level'])
+			FKDR = player['stats']['BedWars']['final_k_d']
+			WR = player['stats']['BedWars']['w_l']
+			WS = player['stats']['BedWars']['winstreak']
+			BBLR = player['stats']['BedWars']['bed_ratio']
+			arr3.append(bwLevel + "✫")
+			arr3.append(p)
+			arr3.append(FKDR)
+			arr3.append(WR)
+			arr3.append(WS)
+			arr3.append(BBLR)
+			arr2.append(arr3)
 
 	id = client.get_guild(673662940133720064)
 	print(tabulate(arr2))
 	#channel = client.get_channel(708405698110816368)
 	#await message.author.send("```" + "\n" + "Overall Stats:" + "\n" + tabulate(arr2) + "\n" + "```")
 	await message.channel.send(">>> __**Bedwars Stats Bot**__" + "\n" + "\n" + "\n" + "Overall Stats:" + "\n" + "```" + "\n" + tabulate(arr2) + "\n" + "```" + "\n" + "`Made by Anon0x19#6246`")
+	return arr2
 	#async def test(author, message):
 	#await message.author.send(arr2)
 	#await client.delete_message(message)
