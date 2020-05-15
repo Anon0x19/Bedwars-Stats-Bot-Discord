@@ -2,7 +2,7 @@
 
 Bedwars Stats Bot for discord programmed in python 3.7.5
 
-## To get it workingon your server
+## To get it workingon your server
 * GitClone the repository or download StatsBot1
 * Change {API_Key} with your bots key and save the file.
 * Install all the modules (Using pip install)
@@ -11,7 +11,7 @@ And its ready to be used!
 
 Note: requirements.txt and Procfile have been already been done. So the bot is ready to be hosted from a server.
 
-## How to use the check stats for all player feature:
+## How to use the check stats for all player feature:
 
 * MacOS:
   * Badlion Client: `<tail -f "./Library/Application Support/minecraft/logs/blclient/minecraft/latest.log" | grep "ONLINE:">`
