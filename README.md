@@ -25,6 +25,6 @@ Note: For MacOS the code will have to be executed on terminal and for windows yo
 You will have to copy the the output form start to finish so that includes `<[time] [Client thread/INFO]: [CHAT] ONLINE:>` and all the players.
 
 
-Credits: 
+### Credits: 
 - MinuteBrain (No GitHub page as of right now, Discord: BoomZa#5926)
 - [Need_Not](https://github.com/NeedNot)
