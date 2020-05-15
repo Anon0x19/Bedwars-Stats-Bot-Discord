@@ -73,8 +73,7 @@ async def on_message(message):
 			arr3.append(WS)
 			arr3.append(BBLR)
 			arr2.append(arr3)
-
-	id = client.get_guild(673662940133720064)
+			
 	print(tabulate(arr2))
 	await message.channel.send(">>> __**Bedwars Stats Bot**__" + "\n" + "\n" + "\n" + "Overall Stats:" + "\n" + "```" + "\n" + tabulate(arr2) + "\n" + "```" + "\n" + "`Made by Anon0x19#6246`")
 	return arr2
