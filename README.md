@@ -4,7 +4,8 @@ Bedwars Stats Bot for discord programmed in python 3.7.5
 
 ## To get it workingon your server
 * GitClone the repository or download StatsBot1
-* Change {API_Key} with your bots key and save the file.
+* Change {TOKEN} with your bots token and save the file.
+* Change {API_KEY} with your Hypixel API key (You can obtain this by logging in and doing /api new and then copying and pasting it).
 * Install all the modules (Using pip install)
 
 And its ready to be used!
