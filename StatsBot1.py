@@ -19,10 +19,9 @@ from discord.ext.commands import Bot
 from discord import RequestsWebhookAdapter, File, Webhook, AsyncWebhookAdapter
 import aiohttp
 
-TOKEN = "NzA4Mzg5ODY1OTQyOTQxNjk2.XrWsSA.SFpCLC9jXngDNwo_v-uBslORQkg"
+TOKEN = "{TOKEN}"
 #webhook = DiscordWebhooks("https://discordapp.com/api/webhooks/708452057593544734/qnAFjGrojGXdla0Xz3HiyGMEaXsD2RiUNnwc6tVJmrADQlFuPULSUm-oHSOFiiG_E0Ct")
 client = commands.Bot(command_prefix=".")
-channel_ids = ["708405698110816368", "708452116573847662"]
 
 arr1 = []
 x = ""
@@ -65,7 +64,7 @@ async def on_message(message):
                 #     .decode('utf-8'))['textures']['SKIN']['url']
                 arr3 = []
                 player = requests.get("https://api.slothpixel.me/api/players/" + pla).json()
-                data = requests.get("https://api.hypixel.net/player?key=c47d4ab6-ada5-4378-86bd-9ff8fa78fd51&name=" + pla).json()
+                data = requests.get("https://api.hypixel.net/player?key={API_KEY}&name=" + pla).json()
                 if "error" in player:
                     embed5 = discord.Embed(
                     title="Bedwars Stats Bot",
@@ -237,7 +236,7 @@ async def on_message(message):
             for p in arr1:
                 arr3 = []
                 player = requests.get("https://api.slothpixel.me/api/players/" + p).json()
-                data = requests.get("https://api.hypixel.net/player?key=c47d4ab6-ada5-4378-86bd-9ff8fa78fd51&name=" + p).json()
+                data = requests.get("https://api.hypixel.net/player?key={API_KEY}&name=" + p).json()
                 if len(arr1) == 1:
                     if len(p) < 2:
                         embed3 = discord.Embed(
@@ -352,7 +351,7 @@ async def on_message(message):
                 for a in arr1:
                     arr3 = []
                     player = requests.get("https://api.slothpixel.me/api/players/" + a).json()
-                    data = requests.get("https://api.hypixel.net/player?key=c47d4ab6-ada5-4378-86bd-9ff8fa78fd51&name=" + a).json()
+                    data = requests.get("https://api.hypixel.net/player?key={API_KEY}&name=" + a).json()
                     if "error" in player:
                         pl = "might be Nicked"
                         arr3.append("")
