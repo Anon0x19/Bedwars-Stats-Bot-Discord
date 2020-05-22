@@ -14,7 +14,7 @@ Note: requirements.txt and Procfile have been already been done. So the bot is r
 
 ## How to use the check stats for all player feature:
 
-* MacOS:
+* MacOS/Unix/Linux:
   * Badlion Client: `<tail -f "./Library/Application Support/minecraft/logs/blclient/minecraft/latest.log" | grep "ONLINE:">`
   * Vanilla/Forge: `<tail -f "./Library/Application Support/minecraft/logs/latest.log" | grep "ONLINE:">`
 * Windows:
