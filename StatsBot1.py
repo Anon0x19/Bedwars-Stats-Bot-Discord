@@ -1,10 +1,10 @@
 #################################################
-#												#
-#			Copyright 2020 Anon0x19				#
-#			All rights reserved					#
-#			Author: anon0x19					#
-#			Date: 09/05/2020					#
-#												#
+#                                               #
+#           Copyright 2020 Anon0x19             #
+#           All rights reserved                 #
+#           Author: Anon0x19                    #
+#           Date: 09/05/2020                    #
+#                                               #
 #################################################
 
 import requests
