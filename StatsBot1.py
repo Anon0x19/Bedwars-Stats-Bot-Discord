@@ -8,8 +8,6 @@
 #################################################
 
 import requests
-#import base64
-#from PIL import Image
 import discord
 import asyncio
 import json
@@ -20,7 +18,6 @@ from discord import RequestsWebhookAdapter, File, Webhook, AsyncWebhookAdapter
 import aiohttp
 
 TOKEN = "{TOKEN}"
-#webhook = DiscordWebhooks("https://discordapp.com/api/webhooks/708452057593544734/qnAFjGrojGXdla0Xz3HiyGMEaXsD2RiUNnwc6tVJmrADQlFuPULSUm-oHSOFiiG_E0Ct")
 client = commands.Bot(command_prefix=".")
 
 arr1 = []
@@ -59,9 +56,6 @@ async def on_message(message):
             arr1.append(content.replace(".overall ", ""))
             Type = "Overall"
             for pla in arr1:
-                #uuid = requests.get('https://api.mojang.com/users/profiles/minecraft/{}'.format(pla)).json()['id']
-                #url = json.loads(base64.b64decode(requests.get('https://sessionserver.mojang.com/session/minecraft/profile/{}'.format(uuid)).json()['properties'][0]['value'])
-                #     .decode('utf-8'))['textures']['SKIN']['url']
                 arr3 = []
                 player = requests.get("https://api.slothpixel.me/api/players/" + pla).json()
                 data = requests.get("https://api.hypixel.net/player?key={API_KEY}&name=" + pla).json()
@@ -382,20 +376,5 @@ async def on_message(message):
                 await message.channel.send(embed=embed4)
             id = client.get_guild(673662940133720064)
             print(tabulate(arr2))
-    #webhook.set_content(content="__**Bedwars Stats Bot**__" + "\n" + "\n" + "\n" + "Overall Stats:" + "\n" + "```" + "\n" + tabulate(arr2) + "\n" + "```" + "\n" + "`Made by Anon0x19#6246`")
-    # channel = client.get_channel(708405698110816368)
-    # await message.author.send("```" + "\n" + "Overall Stats:" + "\n" + tabulate(arr2) + "\n" + "```")
-    # await message.channel.send(">>> __**Bedwars Stats Bot**__" + "\n" + "\n" + "\n" + "Overall Stats:" + "\n" + "```" + "\n" + tabulate(arr2) + "\n" + "```" + "\n" + "`Made by Anon0x19#6246`")
-    #webhook.send()
-    # return arr2
 
-
-
-
-
-# async def test(author, message):
-# await message.author.send(arr2)
-# await client.delete_message(message)
-
-# Webhook.send("Hello Thots, this is a test", username="Bedwars Stats")
 client.run(TOKEN)
