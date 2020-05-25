@@ -27,5 +27,5 @@ You will have to copy the the output form start to finish so that includes `<[ti
 
 
 ### Credits: 
-- MinuteBrain (No GitHub page as of right now, Discord: BoomZa#5926)
+- [MinuteBrain](https://github.com/Boom22545)
 - [Need_Not](https://github.com/NeedNot)
