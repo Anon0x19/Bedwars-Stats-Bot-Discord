@@ -27,5 +27,5 @@ You will have to copy the the output form start to finish so that includes `<[ti
 
 
 ### Credits: 
-- [MinuteBrain](https://github.com/Boom22545)
-- [Need_Not](https://github.com/NeedNot)
+- [MinuteBrain](https://github.com/Boom22545) (Method to obtain the last line on Windows and MacOS/Linux)
+- [Need_Not](https://github.com/NeedNot) (Helping out with some issues regarding the Hypixel API)
