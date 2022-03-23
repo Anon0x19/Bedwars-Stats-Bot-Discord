@@ -30,3 +30,5 @@ You will have to copy the the output form start to finish so that includes `<[ti
 ### Credits: 
 - [MinuteBrain](https://github.com/Boom22545) (Code to obtain the most recent line in the logs)
 - [Need_Not](https://github.com/NeedNot) (Helping out with some issues regarding the Hypixel API)
+
+Notice: This bots code was rushed so optimization and code cleaning is needed
