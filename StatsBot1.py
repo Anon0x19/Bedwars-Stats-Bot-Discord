@@ -19,7 +19,7 @@ from discord import RequestsWebhookAdapter, File, Webhook, AsyncWebhookAdapter
 import aiohttp
 from discord.utils import get
 
-TOKEN = "NzA4Mzg5ODY1OTQyOTQxNjk2.Xs6gbQ.584OfCJKyb8_MH14MXIS8Cy-yzc"
+TOKEN = {TOKEN}
 #webhook = DiscordWebhooks("https://discordapp.com/api/webhooks/708452057593544734/qnAFjGrojGXdla0Xz3HiyGMEaXsD2RiUNnwc6tVJmrADQlFuPULSUm-oHSOFiiG_E0Ct")
 client = commands.Bot(command_prefix=".")
 channel_ids = ["708405698110816368", "708452116573847662"]
