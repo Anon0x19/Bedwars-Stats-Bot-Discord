@@ -7,11 +7,11 @@ Bedwars Stats Bot for discord programmed in python 3.7.5
 `https://github.com/Anon0x19/Bedwars-Stats-Bot-Discord.git`
 * Change {TOKEN} with your bots token and save the file.
 * Change {API_KEY} with your Hypixel API key (You can obtain this by logging in and doing /api new and then copying and pasting it).
-* Install all the modules (all listed in the Procfile) *Note: compatible with Heroku and other hosting plataforms*
+* Install all the modules (all listed in the Procfile)
 
 And its ready to be used!
 
-Note: requirements.txt and Procfile have been already been done. So the bot is ready to be hosted from a server.
+Note: requirements.txt and Procfile have been already been made. So the bot is ready to be hosted from a plataform such as heroku.
 
 ## How to use the check stats for all player feature:
 
@@ -28,5 +28,5 @@ You will have to copy the the output form start to finish so that includes `<[ti
 
 
 ### Credits: 
-- [MinuteBrain](https://github.com/Boom22545) (Method to obtain the last line on Windows and MacOS/Linux)
+- [MinuteBrain](https://github.com/Boom22545) (Code to obtain the most recent line in the logs)
 - [Need_Not](https://github.com/NeedNot) (Helping out with some issues regarding the Hypixel API)
